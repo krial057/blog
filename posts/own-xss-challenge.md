@@ -20,7 +20,7 @@
 
 > :Title shadow=0 0 8px black, color=white
 >
-> Sample Blog Post
+> My first XSS challenge - Writeup
 
 > :Author src=github
 
@@ -30,6 +30,34 @@ So this is the content of this sample blog post. For a new blogpost, just copy t
 `posts/sample-blog-post.md` and get started quickly!
 
 ---
+```php | index.php
+<?php 
+  $nonce = base64_encode(random_bytes(32));
+  header("Content-Security-Policy: default-src 'none'; script-src 'nonce-".$nonce."'"); // --> Only allow script execution with the right nonce token
+?>
+<html>
+    <body>
+        <?php
+            $todos = '';
+            $todos = $todos."<div> Todo #1 </div>\n"; // --> A constant TODO
+            $todos = $todos."<div> Todo #2 </div>\n"; // --> A constant TODO
+            $todos = $todos."<div> ".$_GET['todo']." </div>\n"; // --> A TODO supplied by the user over url
+            $todo_list = explode("\n", $todos);
+            foreach($todo_list as $todo) {
+                if(strpos($todo, "script") === false) { // --> Don't allow script injections in todos
+                    echo $todo."\n";
+                } 
+            }
+        ?>
+
+        <script nonce="<?php echo $nonce ?>">
+            window.onload = () => {
+                console.log("bla")
+            }
+        </script>
+    </body>
+</html>
+```
 
 > :DarkLight
 > > :InDark
