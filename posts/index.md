@@ -11,7 +11,7 @@
 >
 > Alain's Blog
 
-Welcome on my blog. At the moment I will use it mostly for CTF writeups.
+Welcome to my blog.
 
 ---
 
