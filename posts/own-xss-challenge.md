@@ -2,7 +2,7 @@
 >
 > My first XSS challenge - Writeup
 
-> :Author name=Alain, date=13/09/2020
+> :Author name=Alain, date=14/09/2020
 
 <br>
 
@@ -104,7 +104,7 @@ https://not.lu/challenge?todo=%3cSCRIPT%20src=data:,alert(1)
 
 But nothing happens. Let's inspect the DOM tree:
 ```html
-<SCRIPT src="data:,alert(1)" < div>
+<SCRIPT src="data:,alert(1)" </div>
     <script nonce="I7ZgzXJRSbrjz5vwVlPSEOGzDxBZVOjPOVJ6WQJkoWU=">
       console.log("test")
 </script>
@@ -126,7 +126,7 @@ foreach($todo_list as $todo) {
     } 
 }
 ```
-by providing a todo with the following content: `<SCRIPT src="data:,alert(1)" \n script </div>`, we can remove the unwanted closing div tag:
+by providing a todo with the following content: `<SCRIPT src="data:,alert(1)" \n script`, we can remove the unwanted closing div tag:
 
 ```html
 <SCRIPT src="data:,alert(1)" 
