@@ -147,7 +147,7 @@ https://not.lu/challenge?todo=%3cSCRIPT%20src=data:,alert(1)%0ascript
 
 # Why it doesn't work in Chrome / CSP v3
 
-At first I was very confuset why it wasn't working in Chrome. Chrome was throwing an error that the nonce was incorrect. However, the nonce attribute was set and was correct.(`console.log(script.nonce)` was the same as the nonce set in the CSP header).
+At first I was very confused why it wasn't working in Chrome. Chrome was throwing an error that the nonce was incorrect. However, the nonce attribute was set and was correct.(`console.log(script.nonce)` was the same as the nonce set in the CSP header).
 
 It was [@SecurityMB](https://twitter.com/SecurityMB) who pointed me to the following CSP v3 spec: [Nonceable Algorithm](https://www.w3.org/TR/CSP3/#is-element-nonceable). The problem of abusing an already existing script tag's nonce is apprently known and this new spec prevents the mechanic . It does this by chechking for the strings `<script` or `<style` inside a script element's attribute names and values. If it is present it renders the nonce invalid.
 
