@@ -11,7 +11,7 @@
 >
 > Alain's Blog
 
-Welcome on my blog. At the moment I will use it mostly for CTF writeups.
+Welcome to my blog.
 
 ---
 
@@ -19,6 +19,7 @@ Welcome on my blog. At the moment I will use it mostly for CTF writeups.
 
 So here are the latest posts:
 
+> :ArticleCard src=/hack_lu_litter_box
 > :ArticleCard src=/own-xss-challenge
 
 ---
