@@ -44,7 +44,7 @@ The source code of main.js:
     litterbox.src = src   
 })()
 ```
-The goal was to steal of a cookie set by the bot we submit a URL to.
+The goal was to steal a cookie set by the bot we submit a URL to.
 It's pretty clear that we need to somehow pass the condition on line 5 in index.html to eval our own javascript to extract the cookie. So let's get started!
 
 # The solution
