@@ -17,16 +17,16 @@ import { copyLineLinks } from '/home/runner/work/blog/blog/.codedoc/node_modules
 import { ToCToggle } from '/home/runner/work/blog/blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toggle/index.js';
 import { DarkModeSwitch } from '/home/runner/work/blog/blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/darkmode/index.js';
 import { ConfigTransport } from '/home/runner/work/blog/blog/.codedoc/node_modules/@codedoc/core/dist/es6/transport/config.js';
-import { ArticleCard } from '/home/runner/work/blog/blog/.codedoc/node_modules/@codedoc/coding-blog-plugin/dist/es5/components/article-card/index.js';
 import { Author } from '/home/runner/work/blog/blog/.codedoc/node_modules/@codedoc/coding-blog-plugin/dist/es5/components/author/index.js';
+import { ArticleCard } from '/home/runner/work/blog/blog/.codedoc/node_modules/@codedoc/coding-blog-plugin/dist/es5/components/article-card/index.js';
 import { ToCPrevNext } from '/home/runner/work/blog/blog/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/prevnext/index.js';
 
 const components = {
   'k0lYj9deiYXngpZFqYY0vQ==': ToCToggle,
   'QtGDrozMmpfzLYU0jY3n+w==': DarkModeSwitch,
   'Rs0VnrLCFSwfOm1o3R6OHg==': ConfigTransport,
-  '4I2LlaAPZ3FDHhFl7YOveg==': ArticleCard,
   'tvU4ZvTyVzKC9UotaYeV1w==': Author,
+  '4I2LlaAPZ3FDHhFl7YOveg==': ArticleCard,
   'PFhwqFF68841RB6Nunq1Zg==': ToCPrevNext
 };
 
